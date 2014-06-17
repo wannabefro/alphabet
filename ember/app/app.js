@@ -10,5 +10,6 @@ var App = Ember.Application.extend({
 });
 
 loadInitializers(App, 'alphabet');
+loadInitializers(App, 'rails-csrf');
 
 export default App;

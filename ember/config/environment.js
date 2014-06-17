@@ -4,6 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     baseURL: '/',
     locationType: 'auto',
+    railsCsrf: {
+      csrfURL: 'api/v1/csrf_token'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

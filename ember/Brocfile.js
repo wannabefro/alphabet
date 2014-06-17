@@ -48,6 +48,12 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   ]
 });
 
+app.import('vendor/rails-csrf/dist/named-amd/main.js', {
+  'rails-csrf': [
+    'service'
+  ]
+});
+
 // Put the bootstrap fonts in the place that the bootstrap css expects to find them.
 var pickFiles = require('broccoli-static-compiler');
 var bootstrapFonts = pickFiles('vendor/bootstrap-sass-official/vendor/assets/fonts/bootstrap', {
