@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20140617151954) do
   add_index "questions", ["wordquiz_id"], name: "index_questions_on_wordquiz_id", using: :btree
 
   create_table "wordquizzes", force: true do |t|
-    t.datetime "started_at"
     t.datetime "finished_at"
     t.datetime "created_at"
     t.datetime "updated_at"
