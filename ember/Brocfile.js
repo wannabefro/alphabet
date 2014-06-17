@@ -48,5 +48,12 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   ]
 });
 
-
-module.exports = app.toTree();
+// Put the bootstrap fonts in the place that the bootstrap css expects to find them.
+var pickFiles = require('broccoli-static-compiler');
+var bootstrapFonts = pickFiles('vendor/bootstrap-sass-official/vendor/assets/fonts/bootstrap', {
+  srcDir: '/',
+  destDir: '/assets/bootstrap'
+});
+// Merge the bootstrapFonts with the ember app tree
+var mergeTrees = require('broccoli-merge-trees');
+module.exports = mergeTrees([app.toTree(),bootstrapFonts]);
