@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :wordquizzes, only: [:create]
+      resources :questions, only: [:create, :update]
       get :csrf_token, to: 'csrf#index'
     end
   end

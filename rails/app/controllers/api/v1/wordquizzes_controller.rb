@@ -4,7 +4,7 @@ class Api::V1::WordquizzesController < ApplicationController
     if @wordquiz.save
       render json: @wordquiz, status: :created
     else
-      render json: @quiz.errors, status: :unprocessable_entity
+      render json: @wordquiz.errors, status: :unprocessable_entity
     end
   end
 end

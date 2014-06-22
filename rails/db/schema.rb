@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140617151954) do
 
   create_table "questions", force: true do |t|
     t.integer  "wordquiz_id",                 null: false
+    t.string   "letter",                      null: false
     t.boolean  "correct",     default: false
     t.datetime "created_at"
     t.datetime "updated_at"

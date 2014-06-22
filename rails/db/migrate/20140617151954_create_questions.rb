@@ -2,6 +2,7 @@ class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
       t.integer :wordquiz_id, null: false
+      t.string :letter, null: false
       t.boolean :correct, default: false
 
       t.timestamps
